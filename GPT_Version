@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleDrive - My Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        header img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        header input[type="search"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            font-size: 14px;
+        }
+        header input[type="submit"] {
+            padding: 8px 15px;
+            border: none;
+            background-color: #0056b3;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        header input[type="submit"]:hover {
+            background-color: #003f8a;
+        }
+        header .actions button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        header .actions button:hover {
+            background-color: #218838;
+        }
+        .file-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .file-table th, .file-table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+        .file-table th {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        .file-table tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        .file-table tr:hover {
+            background-color: #e9ecef;
+        }
+        .file-table td button {
+            padding: 6px 12px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .file-table td button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">
+            <img src="pngwing.com.png" alt="TeleDrive Logo">
+            <h1>TeleDrive</h1>
+        </div>
+        <div class="search-bar">
+            <input type="search" placeholder="File name...">
+            <input type="submit" value="Search">
+        </div>
+        <div class="actions">
+            <button>Upload</button>
+            <button>Download</button>
+        </div>
+    </header>
+
+    <div class="file-container">
+        <table class="file-table">
+            <tr>
+                <th>Select</th>
+                <th>File Name</th>
+                <th>Size</th>
+                <th>Date Modified</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>file1.txt</td>
+                <td>10 KB</td>
+                <td>2022-01-01 12:00:00</td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>file2.pdf</td>
+                <td>50 MB</td>
+                <td>2022-02-15 15:30:00</td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>file3.jpg</td>
+                <td>3 KB</td>
+                <td>2022-03-16 15:12:11</td>
+                <td><button>Delete</button></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    </div>
+
+</body>
+</html>
