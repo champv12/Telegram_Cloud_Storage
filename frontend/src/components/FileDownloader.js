@@ -3,6 +3,7 @@ import axios from 'axios';
 
 function FileDownloader() {
     const [fileId, setFileId] = useState('');
+    const [error, setError] = useState(null);
 
     const handleDownload = async () => {
         try {
@@ -21,7 +22,9 @@ function FileDownloader() {
             link.setAttribute('download', 'file.mp4');  // Replace with actual file name
             document.body.appendChild(link);
             link.click();
+            link.remove();
         } catch (error) {
+            setError('Failed to download file');
             console.error(error);
         }
     };
@@ -35,6 +38,7 @@ function FileDownloader() {
                 placeholder="Enter file ID"
             />
             <button onClick={handleDownload}>Download</button>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
     );
 }

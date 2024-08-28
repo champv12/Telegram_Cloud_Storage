@@ -2,6 +2,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
     color: #00796b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 button {
@@ -10,8 +16,16 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #004d40;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #00796b;
+    border-radius: 4px;
 }
